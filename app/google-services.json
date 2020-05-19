@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "385190361589",
+    "firebase_url": "https://authentication-project-ccd74.firebaseio.com",
+    "project_id": "authentication-project-ccd74",
+    "storage_bucket": "authentication-project-ccd74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:385190361589:android:96eebc5966be7e0de108bc",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "385190361589-tk0li92e5cakmbt0h9lunktr1sdpnqq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9n8uojOTP2B3dX10sHJNeSUtyiv1DSbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "385190361589-tk0li92e5cakmbt0h9lunktr1sdpnqq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

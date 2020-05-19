@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Snake Game</string>
+    <string name="login">Login</string>
+    <string name="email">email</string>
+    <string name="Password">password\'</string>
+    <string name="CreateNewUser">Don\'t have account , <b><u>Create one!!</u></b></string>
+    <string name="firstname">First Name :-</string>
+    <string name="createUser">"Create an Account "</string>
+    <string name="name0fhint">Enter your name</string>
+    <string name="Email">Email :-</string>
+    <string name="emailofhint">Enter your email</string>
+    <string name="password">Password :-</string>
+    <string name="hintofpassword">Enter your password</string>
+    <string name="CreateAccount"><b><u>JOIN ADVENTURE, BY LOGIN</u></b></string>
+    <string name="ContentDescriptionofSnake">Image of snake</string>
+    <string name="StartGame">Start Game</string>
+    <string name="LogOut">LogOut</string>
+</resources>
