@@ -1,4 +1,4 @@
-# SnakeGame
+
 # SnakeGame
 This is a Snake game as android app in Kotlin language. 
 
