@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.password
 
 class MainActivity : AppCompatActivity() {
 
+    //Assign variable of Firebase Authentication
      var auth: FirebaseAuth ?= null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,12 +34,14 @@ class MainActivity : AppCompatActivity() {
         var email_value = email.text.toString().trim();
         var password_value = password.text.toString().trim();
 
+        // Checking email entry is empty or not
         if (email_value.isEmpty())
         {
             email.error = "Please type your email"
             email.requestFocus()
             return
         }
+        // Checking password entry is empty or not
         if (password_value.isEmpty())
         {
             password.error = "Please type your password"
@@ -47,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         }
         progressBar_front.visibility = View.VISIBLE
 
+        // Checking the email and password from Firebase Authentication
         auth?.signInWithEmailAndPassword(email_value,password_value)!!.addOnCompleteListener{ task ->
             if(task.isSuccessful)
             {

@@ -78,6 +78,7 @@ class SnakeGame : AppCompatActivity() {
             )
             hideImages()
 
+        // count Down
             object : CountDownTimer(30000, 1000) {
                 override fun onFinish() {
                     timeText.setText("Time: 0")
@@ -105,14 +106,18 @@ class SnakeGame : AppCompatActivity() {
         scoreText.setText("Score: $score")
     }
 
+
 fun alertMessage(){
 
+    // Setting the alert message
     val alertDialog :AlertDialog.Builder = AlertDialog.Builder(this)
     alertDialog.setMessage("Your highest score is $score")
+    // Positive message
     alertDialog.setPositiveButton("Try Again") { dialog:DialogInterface, which:Int ->
         Toast.makeText(this,"You have 30 second Let Go!! ",Toast.LENGTH_SHORT).show()
         gameStart()
     }
+    // Negative message
 alertDialog.setNegativeButton("Exit"){dialog:DialogInterface,which:Int ->
     // Sign out Successfully
     FirebaseAuth.getInstance().signOut()

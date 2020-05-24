@@ -23,12 +23,10 @@ import java.util.regex.Pattern
 
 class newuser : AppCompatActivity() {
      lateinit var auth : FirebaseAuth;
-    var database:FirebaseDatabase? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_createnewuser)
         auth = FirebaseAuth.getInstance()
-        database = FirebaseDatabase.getInstance()
         createAccount.setOnClickListener {
             button_createAccount()
         }
@@ -37,6 +35,7 @@ class newuser : AppCompatActivity() {
         var email_text = emailforcreate.text.toString().trim();
         var password_text = createnewpassword.text.toString().trim();
 
+       //  Checking  the email and password is empty or not
         if (email_text.isEmpty())
         {
             emailforcreate.error = "Please type your email"
@@ -55,8 +54,6 @@ class newuser : AppCompatActivity() {
             {
                 Toast.makeText(this,"User account is created",Toast.LENGTH_LONG).show()
                 progressBar.visibility = View.GONE
-              // calling the function
-                savingData(email_text)
                 // You can use the intent here to navigate to main Login page
               val intent  = Intent(this,MainActivity::class.java)
                 startActivity(intent)
@@ -70,21 +67,11 @@ class newuser : AppCompatActivity() {
         }
 
     }
-    fun savingData( email_text:String){
-        val uid  = auth.currentUser?.uid ?:""
-        val datastore  =  data(email_text,0)
-        database!!.getReference("users/$uid").setValue(datastore).addOnSuccessListener {
-            Log.d("NewUSer","Finally we saved on firebase console")
-        }.addOnFailureListener {
-            exception ->
-            println(exception.message)
-        }
-
 
 
     }
-    class data (val email: String ,val score :Int) { }
-}
+
+
 
 
 
